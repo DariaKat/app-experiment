@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+      "outDir": "./dist/",
+      "noImplicitAny": true, // подсвечивает все места, где не указан тип
+      "module": "ESNext",
+      // а какую спецификацию компилируем
+      "target": "es5",
+      "jsx": "react-jsx",
+      "allowJs": true,
+      "moduleResolution": "node",
+      //настройка путей
+      "baseUrl": ".",
+      "paths": {
+        "*": ["./src/*"] // по умолчанию из папки src
+      },
+      "esModuleInterop": true, // позволяет работать с пакетами, к-ые используют common js - (require() module.exports) как с обычными с помощью import 
+      "allowSyntheticDefaultImports": true, // если библиотека не имеет defaul import замена (import * as ...) на (import ...)
+    },
+    "ts-node": {
+        "compilerOptions": {
+            "module": "CommonJS",
+        }
+    },
+}
